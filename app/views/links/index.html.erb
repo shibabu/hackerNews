@@ -3,7 +3,8 @@
       <h2>
         <%= link_to link.title, link %><br>
       </h2>
-      <small class="author">Submitted <%= time_ago_in_words link.created_at %> ago, by <%= link.user.email %></small>
+      <small class="author">Submitted <%= time_ago_in_words link.created_at %> ago, by <%= link.user.name %></small>
+      <small class="pull-right"><%= pluralize link.comments.count, 'Comment' %></small>
       <br>
 
       <div class="btn-group">
