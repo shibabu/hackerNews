@@ -1,2 +1,2 @@
-A Basic hackerNews like Ruby on Rails app
+==A Basic hackerNews like in Ruby on Rails
 -----------------------------------------
