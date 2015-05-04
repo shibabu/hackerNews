@@ -1,13 +1,11 @@
-
-<p>
-  <strong>Title:</strong>
-  <%= @link.title %>
-</p>
-
-<p>
-  <strong>Url:</strong>
-  <%= @link.url %>
-</p>
-
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<%= link_to 'Back', links_path %>
+<div class="page-header">
+  <h1>
+    <%= link_to @link.title, @link.url %>
+    <%= link_to 'Visit URL', @link.url, class: 'btn btn-xs btn-primary' %>
+    <%= link_to 'Edit', edit_link_path(@link), class: 'btn btn-lg btn-default pull-right' %>
+  </h1>
+  <% if @link.user == current_user %>
+  <% end %>
+  <small>Submitted by <%= @link.user.email %></small>
+</div>
+<%= link_to 'Delete', @link, method: :delete, data: {confirm: 'Are Your Sure?'}, class: 'btn btn-xs btn-danger pull-right' %>
